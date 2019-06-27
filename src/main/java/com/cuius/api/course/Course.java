@@ -4,6 +4,7 @@ import com.cuius.api.topic.Topic;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Course {
@@ -12,6 +13,8 @@ public class Course {
     public String id;
     public String name;
     public String description;
+
+    @ManyToOne
     private Topic topic;
 
     public Course() {
